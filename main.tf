@@ -18,6 +18,7 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
 
   tags = {
+    # to override via commandline: terraform apply -var "instance_name=YetAnotherName"
     Name = var.instance_name
   }
 }
